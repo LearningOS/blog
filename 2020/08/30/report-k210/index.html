@@ -19,24 +19,24 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"rcore-os.github.io","root":"/blog/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+    var CONFIG = {"hostname":"learningos.github.io","root":"/blog/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
   </script>
 
   <meta name="description" content="移植rCore-Tutorial 到k210 徐文浩报告   移植rCore-Tutorial 到k210 徐文浩报告](#移植rCore-Tutorial 到k210 徐文浩报告)  目录  实验目标描述  已有相关工作介绍  主要成果描述  在opensbi上运行lab1-6 在rustsbi上运行lab1-6 在sd卡上读写用户态 虚拟存储 致谢   实验总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移植rCore-Tutorial 到k210 徐文浩报告">
-<meta property="og:url" content="http://rcore-os.github.io/blog/2020/08/30/report-k210/index.html">
-<meta property="og:site_name" content="rcore-os Blog">
+<meta property="og:url" content="http://learningos.github.io/blog/2020/08/30/report-k210/index.html">
+<meta property="og:site_name" content="LearningOS Blog">
 <meta property="og:description" content="移植rCore-Tutorial 到k210 徐文浩报告   移植rCore-Tutorial 到k210 徐文浩报告](#移植rCore-Tutorial 到k210 徐文浩报告)  目录  实验目标描述  已有相关工作介绍  主要成果描述  在opensbi上运行lab1-6 在rustsbi上运行lab1-6 在sd卡上读写用户态 虚拟存储 致谢   实验总结">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-30T21:30:00.000Z">
-<meta property="article:modified_time" content="2023-12-03T07:50:15.235Z">
-<meta property="article:author" content="rcore-os Group">
+<meta property="article:modified_time" content="2023-12-21T02:42:14.263Z">
+<meta property="article:author" content="LearningOS Group">
 <meta property="article:tag" content="summerofcode2020">
 <meta property="article:tag" content="author:freheit889">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://rcore-os.github.io/blog/2020/08/30/report-k210/">
+<link rel="canonical" href="http://learningos.github.io/blog/2020/08/30/report-k210/">
 
 
 <script class="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>移植rCore-Tutorial 到k210 徐文浩报告 | rcore-os Blog</title>
+  <title>移植rCore-Tutorial 到k210 徐文浩报告 | LearningOS Blog</title>
   
 
 
@@ -113,7 +113,7 @@
 
     <a href="/blog/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">rcore-os Blog</h1>
+      <h1 class="site-title">LearningOS Blog</h1>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -183,7 +183,7 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">rcore-os Group</p>
+  <p class="site-author-name" itemprop="name">LearningOS Group</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap animated">
@@ -191,7 +191,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">197</span>
+          <span class="site-state-item-count">198</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -241,16 +241,16 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2020/08/30/report-k210/">
+    <link itemprop="mainEntityOfPage" href="http://learningos.github.io/blog/2020/08/30/report-k210/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="name" content="LearningOS Group">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rcore-os Blog">
+      <meta itemprop="name" content="LearningOS Blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -271,7 +271,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-12-03 07:50:15" itemprop="dateModified" datetime="2023-12-03T07:50:15+00:00">2023-12-03</time>
+                <time title="Modified: 2023-12-21 02:42:14" itemprop="dateModified" datetime="2023-12-21T02:42:14+00:00">2023-12-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -328,7 +328,7 @@
 <h3 id="在sd卡上读写用户态"><a href="#在sd卡上读写用户态" class="headerlink" title="在sd卡上读写用户态"></a>在sd卡上读写用户态</h3><p> 刚开始我想直接用sd卡的例程，但是老是访问m态，所以我就想着是不是可以先用flash，在我搞flash的过程中，吴一凡学长告诉我他把sd卡搞定了。然后之后的sd卡块驱动之类的我<br> 把它搞定了，但是这个时候在内核重映射的时候没有把这一段物理地址映射过去，所以我手动添加了一些offset为0的映射，这样就可以正常使用了。</p>
 <p> 相应的commit:<a href="https://github.com/freheit889/rCore-Tutorial/commit/e93ae81a7136ea784bf670f812928574798395fc" target="_blank" rel="noopener">https://github.com/freheit889/rCore-Tutorial/commit/e93ae81a7136ea784bf670f812928574798395fc</a></p>
 <h3 id="虚拟存储"><a href="#虚拟存储" class="headerlink" title="虚拟存储"></a>虚拟存储</h3><p> 这里的虚拟存储主要参考了rCore-Tutorial里的置换算法,但是在使用过程中，会有爆栈的错误，后来想了一个折中的方法，就是将线程的运行栈大小调的很大，在使用的时候，如果缺页，就进行置换，<br> 也可以一定程度上解决问题，最后也算是实现了，不足之处只能等之后再搞了</p>
-<p> 参考：<a href="https://rcore-os.github.io/rCore-Tutorial-deploy/docs/lab-3/guide/part-5.html">https://rcore-os.github.io/rCore-Tutorial-deploy/docs/lab-3/guide/part-5.html</a><br> 相应的commit:<a href="https://github.com/freheit889/rCore-Tutorial/commit/8a43cdfc191b7fba3df9e634806adec8d5a65e19" target="_blank" rel="noopener">https://github.com/freheit889/rCore-Tutorial/commit/8a43cdfc191b7fba3df9e634806adec8d5a65e19</a></p>
+<p> 参考：<a href="https://rcore-os.github.io/rCore-Tutorial-deploy/docs/lab-3/guide/part-5.html" target="_blank" rel="noopener">https://rcore-os.github.io/rCore-Tutorial-deploy/docs/lab-3/guide/part-5.html</a><br> 相应的commit:<a href="https://github.com/freheit889/rCore-Tutorial/commit/8a43cdfc191b7fba3df9e634806adec8d5a65e19" target="_blank" rel="noopener">https://github.com/freheit889/rCore-Tutorial/commit/8a43cdfc191b7fba3df9e634806adec8d5a65e19</a></p>
 <h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><p> 感谢向勇老师跟陈渝老师给的这次机会，还有王润基学长跟吴一凡学长给与的帮助，我在这次活动中收获了很多，也非常开心，希望之后还能参与进来做更多的事情，完结撒花😁</p>
 <h2 id="实验总结"><a href="#实验总结" class="headerlink" title="实验总结"></a>实验总结</h2><p> 感觉自己算是真的是把之前不会的东西都学明白了，只靠理论好多东西都不知道为什么，在艰难的debug中学习到了很多知识，虽然过程很痛苦，但是调出来的那一瞬间非常开心！</p>
 
@@ -408,7 +408,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">rcore-os Group</span>
+  <span class="author" itemprop="copyrightHolder">LearningOS Group</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
